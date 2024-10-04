@@ -25,6 +25,8 @@ EXPOSE 5050
 CMD python /home/myapp/sample_app.py
 _EOF_
 
+docker rm -f samplerunning
+
 cd tempdir || exit
 docker build -t sampleapp .
 docker run -t -d -p 5050:5050 --name samplerunning sampleapp

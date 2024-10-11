@@ -6,7 +6,7 @@ if [ "$(docker ps -a --filter 'name=TODO' -q)" ]; then
     docker rm TODO
 fi
 
-cd getting-started-master/app
+cd getting-started-master/getting-started-master/app
 
 docker build -t getting-started .
 docker run -dp 3000:3000 --name TODO getting-started
